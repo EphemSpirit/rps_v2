@@ -2,10 +2,12 @@ let playerChoice;
 let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
+let ties = 0;
 
 let playerBoard = document.querySelector("#player-score");
 let computerBoard = document.querySelector("#computer-score");
 let gameResults = document.querySelector("#game-results");
+let tieGames = document.querySelector("#tie-score");
 let buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
@@ -30,6 +32,7 @@ function getComputerChoice () {
 function compareChoices (playerChoice, computerChoice) {
   if (playerChoice == computerChoice) {
     gameResults.textContent = `${playerChoice} and ${computerChoice} are tied!`;
+    ties++;
   } else if (computerChoice == 'paper') {
     switch (playerChoice) {
       case 'scissors':
@@ -73,4 +76,5 @@ function compareChoices (playerChoice, computerChoice) {
   function updateScores () {
     playerBoard.innerHTML = `Player Score: ${playerScore}`;
     computerBoard.innerHTML = `Computer Score: ${computerScore}`;
+    tieGames.innerHTML = `Ties: ${ties}`;
   }
