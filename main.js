@@ -35,33 +35,39 @@ function compareChoices (playerChoice, computerChoice) {
       case 'scissors':
         gameResults.textContent = `${playerChoice} beats ${computerChoice}!`;
         playerScore++;
+        break;
 
       case 'rock':
         gameResults.textContent = `${computerChoice} beats ${playerChoice}!`;
         computerScore++;
+        break;
       }
     } else if (computerChoice == 'rock') {
       switch (playerChoice) {
         case 'paper':
           gameResults.textContent = `${playerChoice} beats ${computerChoice}!`;
           playerScore++;
+          break;
 
         case 'scissors':
           gameResults.textContent = `${computerChoice} beats ${playerChoice}!`;
           computerScore++;
+          break;
       }
     } else if (computerChoice == 'scissors') {
       switch (playerChoice) {
         case 'rock':
           gameResults.textContent = `${playerChoice} beats ${computerChoice}`;
           playerScore++;
+          break;
 
         case 'paper':
           gameResults.textContent = `${computerChoice} beats ${playerChoice}!`;
           computerScore++;
+          break;
       }
     }
-    updateScores();
+    updateScores(playerScore, computerScore);
   }
 
   function updateScores () {
