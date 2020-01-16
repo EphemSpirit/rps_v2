@@ -12,7 +12,7 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     playerChoice = button.value;
     getComputerChoice();
-    compareChoices();
+    compareChoices(playerChoice, computerChoice);
 });
 });
 
@@ -64,7 +64,7 @@ function compareChoices (playerChoice, computerChoice) {
     updateScores();
   }
 
-  function updateScores (playerScore, computerScore) {
+  function updateScores () {
     playerBoard.innerHTML = `Player Score: ${playerScore}`;
     computerBoard.innerHTML = `Computer Score: ${computerScore}`;
   }
