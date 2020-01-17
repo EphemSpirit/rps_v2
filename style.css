@@ -18,9 +18,13 @@
 .btn-select {
   text-align: center;
   width: 75%;
-  height: 200px;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.reset-button {
+  text-align: center;
 }
 
 .results {
