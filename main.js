@@ -51,36 +51,36 @@ function compareChoices (playerChoice, computerChoice) {
   } else if (computerChoice == 'paper') {
     switch (playerChoice) {
       case 'scissors':
-        gameResults.textContent = `${playerChoice} beats ${computerChoice}!`;
+        gameResults.textContent = `${playerChoice} beats ${computerChoice}! You won!`;
         playerScore++;
         break;
 
       case 'rock':
-        gameResults.textContent = `${computerChoice} beats ${playerChoice}!`;
+        gameResults.textContent = `${computerChoice} beats ${playerChoice}! The computer won!`;
         computerScore++;
         break;
       }
     } else if (computerChoice == 'rock') {
       switch (playerChoice) {
         case 'paper':
-          gameResults.textContent = `${playerChoice} beats ${computerChoice}!`;
+          gameResults.textContent = `${playerChoice} beats ${computerChoice}! You won!`;
           playerScore++;
           break;
 
         case 'scissors':
-          gameResults.textContent = `${computerChoice} beats ${playerChoice}!`;
+          gameResults.textContent = `${computerChoice} beats ${playerChoice}! The computer won!`;
           computerScore++;
           break;
       }
     } else if (computerChoice == 'scissors') {
       switch (playerChoice) {
         case 'rock':
-          gameResults.textContent = `${playerChoice} beats ${computerChoice}`;
+          gameResults.textContent = `${playerChoice} beats ${computerChoice}! You won!`;
           playerScore++;
           break;
 
         case 'paper':
-          gameResults.textContent = `${computerChoice} beats ${playerChoice}!`;
+          gameResults.textContent = `${computerChoice} beats ${playerChoice}! The computer won!`;
           computerScore++;
           break;
       }
